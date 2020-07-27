@@ -15,6 +15,8 @@
 		1E6C02AE1D11C995004D2B5E /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C02AD1D11C995004D2B5E /* SourceEditorExtension.swift */; };
 		1E6C02B01D11C995004D2B5E /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E6C02AF1D11C995004D2B5E /* SourceEditorCommand.swift */; };
 		1E6C02B41D11C995004D2B5E /* Alignment.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1E6C02A61D11C995004D2B5E /* Alignment.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6078BDD124CE81AA00CC9E9F /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6078BDD024CE81AA00CC9E9F /* XcodeKit.framework */; };
+		6078BDD224CE81AA00CC9E9F /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6078BDD024CE81AA00CC9E9F /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,17 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6078BDD324CE81AA00CC9E9F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6078BDD224CE81AA00CC9E9F /* XcodeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +68,7 @@
 		1E6C02AD1D11C995004D2B5E /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
 		1E6C02AF1D11C995004D2B5E /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
 		1E6C02B11D11C995004D2B5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6078BDD024CE81AA00CC9E9F /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +84,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E6C02A91D11C995004D2B5E /* Cocoa.framework in Frameworks */,
+				6078BDD124CE81AA00CC9E9F /* XcodeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +127,7 @@
 		1E6C02A71D11C995004D2B5E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6078BDD024CE81AA00CC9E9F /* XcodeKit.framework */,
 				1E6C02A81D11C995004D2B5E /* Cocoa.framework */,
 			);
 			name = Frameworks;
@@ -165,6 +181,7 @@
 				1E6C02A21D11C995004D2B5E /* Sources */,
 				1E6C02A31D11C995004D2B5E /* Frameworks */,
 				1E6C02A41D11C995004D2B5E /* Resources */,
+				6078BDD324CE81AA00CC9E9F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -182,14 +199,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = tid;
 				TargetAttributes = {
 					1E6C028F1D11C98C004D2B5E = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = DP9Q5R8635;
+						DevelopmentTeam = 5XL7F7GF68;
 						DevelopmentTeamName = "Atsushi Kiwaki";
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1200;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
@@ -202,9 +219,9 @@
 					};
 					1E6C02A51D11C995004D2B5E = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = DP9Q5R8635;
+						DevelopmentTeam = 5XL7F7GF68;
 						DevelopmentTeamName = "Atsushi Kiwaki";
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1200;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.Mac = {
@@ -216,7 +233,7 @@
 			};
 			buildConfigurationList = 1E6C028B1D11C98C004D2B5E /* Build configuration list for PBXProject "AlignmentForXcode" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -297,6 +314,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -317,6 +335,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -354,6 +373,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -374,6 +394,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -407,11 +428,13 @@
 				CODE_SIGN_ENTITLEMENTS = AlignmentForXcode.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5XL7F7GF68;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "XcodeSourceEditorExtension-Alignment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tid.Alignment-for-Xcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -423,11 +446,13 @@
 				CODE_SIGN_ENTITLEMENTS = AlignmentForXcode.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5XL7F7GF68;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "XcodeSourceEditorExtension-Alignment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.tid.Alignment-for-Xcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -437,14 +462,15 @@
 				CODE_SIGN_ENTITLEMENTS = Alignment/Alignment.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = DP9Q5R8635;
+				DEVELOPMENT_TEAM = 5XL7F7GF68;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Alignment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tid.Alignment-for-Xcode.Alignment";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tid.Alignment-for-Xcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -454,14 +480,15 @@
 				CODE_SIGN_ENTITLEMENTS = Alignment/Alignment.entitlements;
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = DP9Q5R8635;
+				DEVELOPMENT_TEAM = 5XL7F7GF68;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = Alignment/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.tid.Alignment-for-Xcode.Alignment";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tid.Alignment-for-Xcode";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
